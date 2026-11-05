@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portefólio de Afonso Marques Machado, estudante de Engenharia Informática no ISEP, com interesse em desenvolvimento Backend e Full-stack.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Afonso Marques Machado | Portefólio</title>
+  <style>
+    :root {
+      --bg: #0b1120; --panel: #111b2e; --panel-2: #15233a;
+      --line: #26344e; --text: #f1f5ff; --muted: #a8b7d0;
+      --blue: #91b7ff; --mint: #72e6c4; --peach: #ffc391;
+      --shadow: 0 20px 65px rgba(0, 0, 0, .24);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+    body::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 740px; background: radial-gradient(ellipse at 78% 18%, rgba(66,117,234,.18), transparent 36%), radial-gradient(ellipse at 16% 32%, rgba(40,209,160,.11), transparent 37%); pointer-events: none; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--mint); }
+    button { font: inherit; cursor: pointer; }
+    :focus-visible { outline: 2px solid var(--mint); outline-offset: 4px; }
+    .container { width: min(1120px, calc(100% - 48px)); margin-inline: auto; position: relative; }
+    .nav { border-bottom: 1px solid rgba(160, 183, 220, .12); position: relative; z-index: 2; }
+    .nav-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 800; letter-spacing: .015em; white-space: nowrap; }
+    .brand-logo { display: grid; place-items: center; width: 37px; height: 37px; border-radius: 11px; background: linear-gradient(140deg, #75e7c1, #8baefb); color: #09121f; font-weight: 900; }
+    .nav-links { display: flex; align-items: center; gap: 27px; color: #c1cde1; font-size: 14px; font-weight: 600; }
+    .nav-links a { transition: color .2s; }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #485a75; border-radius: 10px; padding: 10px 15px; color: var(--text); font-weight: 650; }
+    .hero { min-height: 615px; padding: 104px 0 98px; display: grid; grid-template-columns: minmax(0, 1.07fr) minmax(320px, .93fr); align-items: center; gap: 66px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--mint); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .11em; }
+    .eyebrow-dot { width: 8px; height: 8px; background: var(--mint); border-radius: 50%; box-shadow: 0 0 0 5px rgba(114,230,196,.11); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: clamp(42px, 5vw, 69px); line-height: 1.09; letter-spacing: -.05em; margin: 24px 0 22px; font-weight: 850; }
+    h1 span { background: linear-gradient(100deg, #84eacc 0%, #8eaffd 76%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-copy { max-width: 555px; color: var(--muted); font-size: 17px; line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 31px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 11px; border-radius: 11px; border: 1px solid #40516d; padding: 12px 20px; font-size: 14px; font-weight: 750; transition: transform .18s, background .18s, color .18s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--mint); color: #0b1925; border-color: var(--mint); }
+    .btn-primary:hover { background: #9cf2d6; color: #0b1925; }
+    .btn-secondary { background: #142138; color: #e9f2ff; }
+    .btn-secondary:hover { color: var(--mint); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 14px 24px; margin-top: 42px; color: #b8c8df; font-size: 13px; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+    .hero-meta svg { width: 16px; height: 16px; color: var(--mint); }
+    .terminal { border: 1px solid #334762; border-radius: 18px; overflow: hidden; background: rgba(17, 28, 47, .92); box-shadow: var(--shadow); transform: rotate(1deg); }
+    .terminal-top { height: 47px; background: #18273c; border-bottom: 1px solid #2a3a54; display: flex; align-items: center; padding: 0 19px; gap: 7px; }
+    .circle { width: 10px; height: 10px; border-radius: 50%; background: #fc8a8a; }
+    .circle:nth-child(2) { background: #f7ca80; } .circle:nth-child(3) { background: #7cdcb4; }
+    .terminal-file { color: #849bb8; font-size: 12px; margin-left: auto; font-weight: 700; }
+    .terminal-body { padding: 28px 27px 31px; font: 13px/2 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; overflow: hidden; }
+    .token-key { color: #9fbafa; } .token-string { color: #a6eecb; } .token-value { color: #ffcd9a; }
+    .code-indent { padding-left: 22px; } .code-indent2 { padding-left: 42px; }
+    .terminal-note { color: #8296b0; }
+    section { padding: 72px 0; scroll-margin-top: 25px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 31px; }
+    .kicker { display: block; font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; color: var(--mint); margin-bottom: 10px; }
+    h2 { font-size: clamp(29px, 3vw, 39px); line-height: 1.18; letter-spacing: -.035em; margin: 0; }
+    .section-desc { color: var(--muted); margin: 10px 0 0; max-width: 610px; font-size: 15px; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .project { border: 1px solid var(--line); background: linear-gradient(160deg, #18263e, #101b2e 78%); border-radius: 19px; padding: 25px; min-height: 365px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+    .project:before { content: ''; height: 3px; position: absolute; top: 0; left: 0; right: 0; background: var(--accent); }
+    .project-icon { width: 56px; height: 56px; display: grid; place-items: center; background: color-mix(in srgb, var(--accent) 13%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent); color: var(--accent); font-size: 27px; border-radius: 16px; margin-bottom: 22px; }
+    .project small { font-size: 11px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; }
+    .project h3 { font-size: 20px; letter-spacing: -.025em; line-height: 1.32; margin: 8px 0 11px; }
+    .project p { color: var(--muted); font-size: 14px; margin-bottom: 19px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; padding-top: 8px; }
+    .tag { color: #bfcee4; background: #22314a; border: 1px solid #33445f; border-radius: 7px; padding: 4px 8px; font-size: 11px; font-weight: 650; }
+    .repo-actions { border-top: 1px solid #2e405b; margin-top: 23px; padding-top: 18px; min-height: 35px; }
+    .repo-actions a { font-size: 13px; font-weight: 750; display: inline-flex; gap: 8px; align-items: center; color: #c8d9f9; }
+    .repo-actions a:hover { color: var(--mint); }
+    .repo-status { color: #91a6c5; font-size: 12px; }
+    .skills-wrap { display: grid; grid-template-columns: .85fr 1.15fr; gap: 34px; align-items: start; }
+    .skills-copy { color: var(--muted); max-width: 400px; font-size: 15px; }
+    .skills-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .skill-card { background: #111e31; border: 1px solid var(--line); border-radius: 15px; padding: 20px; }
+    .skill-card h3 { font-size: 15px; margin-bottom: 10px; }
+    .skill-card p { color: #afbfda; font-size: 13px; line-height: 1.75; margin: 0; }
+    .about-panel { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 35px; border: 1px solid #2a4b54; background: linear-gradient(110deg, #12283a, #132438 75%); border-radius: 22px; padding: 40px 45px; }
+    .about-panel p { font-size: 15px; color: #b7cbe0; max-width: 690px; margin: 10px 0 0; }
+    .contact-links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    footer { padding: 24px 0 42px; color: #8598b4; border-top: 1px solid #26344d; font-size: 13px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-inner a { color: #b5cbea; }
+    @media (max-width: 1000px) { .hero { gap: 32px; } .terminal-body { padding: 23px 19px; font-size: 11px; } .project-grid { grid-template-columns: repeat(2, 1fr); } .project:last-child { grid-column: span 2; min-height: 0; } }
+    @media (max-width: 700px) {
+      .container { width: min(100% - 32px, 560px); }
+      .nav-inner { min-height: 72px; } .nav-links { gap: 16px; } .nav-links a:not(.nav-cta) { display: none; }
+      .brand { font-size: 13px; } .nav-cta { font-size: 12px; padding: 8px 10px; }
+      .hero { grid-template-columns: 1fr; min-height: unset; padding: 76px 0 48px; gap: 45px; }
+      h1 { font-size: clamp(40px, 10vw, 55px); } .hero-copy { font-size: 15px; }
+      .terminal { transform: none; } .terminal-body { font-size: 12px; }
+      section { padding: 53px 0; }
+      .project-grid, .skills-wrap, .skills-cards, .about-panel { grid-template-columns: 1fr; }
+      .project:last-child { grid-column: auto; } .project { min-height: 330px; }
+      .about-panel { padding: 29px; } .contact-links { justify-content: start; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#inicio" aria-label="Página inicial"><span class="brand-logo">AM</span> Afonso Machado</a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#projetos">Projetos</a>
+        <a href="#competencias">Competências</a>
+        <a class="nav-cta" href="#contacto">Contactar ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="hero" id="inicio">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Disponível para estágio curricular · Fev. 2027</div>
+          <h1>Olá, sou o <span>Afonso.</span></h1>
+          <p class="hero-copy">Estudante do 3.º ano de <strong>Engenharia Informática no ISEP</strong>, com interesse em desenvolvimento <strong>Backend e Full-stack</strong>. Gosto de transformar problemas reais em aplicações funcionais, desde a lógica de negócio até à interface.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projetos">Explorar projetos <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="https://github.com/1241182-AfonsoMachado" target="_blank" rel="noopener noreferrer">Ver GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Vila Nova de Gaia · Porto</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 8 12 3l8 5v8l-8 5-8-5V8Z"/><path d="m4 8 8 5 8-5M12 13v8"/></svg>Desenvolvimento de software</span>
+          </div>
+        </div>
+        <div class="terminal" aria-label="Resumo técnico em formato de código">
+          <div class="terminal-top"><i class="circle"></i><i class="circle"></i><i class="circle"></i><span class="terminal-file">about-me.json</span></div>
+          <div class="terminal-body">
+            <div class="terminal-note">// a construir o futuro, um commit de cada vez</div>
+            <div>{</div>
+            <div class="code-indent"><span class="token-key">"nome"</span>: <span class="token-string">"Afonso Machado"</span>,</div>
+            <div class="code-indent"><span class="token-key">"formacao"</span>: <span class="token-string">"Engenharia Informática · ISEP"</span>,</div>
+            <div class="code-indent"><span class="token-key">"interesses"</span>: [</div>
+            <div class="code-indent2"><span class="token-string">"Backend"</span>, <span class="token-string">"Full-stack"</span></div>
+            <div class="code-indent">],</div>
+            <div class="code-indent"><span class="token-key">"stack"</span>: [</div>
+            <div class="code-indent2"><span class="token-string">"Java"</span>, <span class="token-string">"Spring Boot"</span>,</div>
+            <div class="code-indent2"><span class="token-string">"React"</span>, <span class="token-string">"TypeScript"</span></div>
+            <div class="code-indent">],</div>
+            <div class="code-indent"><span class="token-key">"estagio"</span>: <span class="token-value">"fevereiro de 2027"</span></div>
+            <div>}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="projetos" aria-labelledby="projetos-titulo">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="kicker">01 / Projetos académicos</span><h2 id="projetos-titulo">Projetos em destaque</h2><p class="section-desc">Três projetos multidisciplinares desenvolvidos ao longo da licenciatura, com foco em engenharia de software, arquitetura, dados e colaboração.</p></div>
+        </div>
+        <div class="project-grid">
+          <article class="project" style="--accent: #72e6c4">
+            <div class="project-icon" aria-hidden="true">🍕</div>
+            <small>5.º semestre · 2026</small>
+            <h3>LaPrizza</h3>
+            <p>Sistema de gestão de restauração. Desenvolvimento Full-stack, APIs REST e regras de negócio para configuração de pizzas predefinidas, com princípios DDD e arquitetura Onion.</p>
+            <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">MongoDB</span></div>
+            <div class="repo-actions" data-project="laprizza"><span class="repo-status">Link para o repositório a adicionar</span></div>
+          </article>
+          <article class="project" style="--accent: #91b7ff">
+            <div class="project-icon" aria-hidden="true">✈</div>
+            <small>4.º semestre · 2026</small>
+            <h3>Sistema de Gestão de Tráfego Aéreo</h3>
+            <p>Projeto de gestão e simulação de operações aéreas, integrando componentes em Java e C, persistência em PostgreSQL e comunicação em rede.</p>
+            <div class="tags"><span class="tag">Java</span><span class="tag">C</span><span class="tag">PostgreSQL</span><span class="tag">TCP/UDP</span></div>
+            <div class="repo-actions" data-project="trafego"><span class="repo-status">Link para o repositório a adicionar</span></div>
+          </article>
+          <article class="project" style="--accent: #ffc391">
+            <div class="project-icon" aria-hidden="true">🚆</div>
+            <small>3.º semestre · 2025/26</small>
+            <h3>Logistics on Rails</h3>
+            <p>Solução para operações logísticas ferroviárias, com modelação de dados, algoritmos, estruturas de informação e componentes em diferentes linguagens.</p>
+            <div class="tags"><span class="tag">Java</span><span class="tag">SQL / PL/SQL</span><span class="tag">C</span><span class="tag">Assembly</span></div>
+            <div class="repo-actions" data-project="ferroviaria"><span class="repo-status">Link para o repositório a adicionar</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="competencias" aria-labelledby="competencias-titulo">
+      <div class="container skills-wrap">
+        <div><span class="kicker">02 / Competências</span><h2 id="competencias-titulo">Ferramentas que utilizo para construir software</h2><p class="skills-copy">A minha formação combina desenvolvimento de aplicações com fundamentos de arquitetura, bases de dados, testes e trabalho em equipa.</p></div>
+        <div class="skills-cards">
+          <div class="skill-card"><h3>Backend &amp; APIs</h3><p>Java · Spring Boot · APIs REST · Spring Security · JPA</p></div>
+          <div class="skill-card"><h3>Frontend</h3><p>React · TypeScript · JavaScript · HTML · CSS · Three.js</p></div>
+          <div class="skill-card"><h3>Dados &amp; linguagens</h3><p>MongoDB · PostgreSQL · Oracle · SQL · PL/SQL · C</p></div>
+          <div class="skill-card"><h3>Práticas &amp; ferramentas</h3><p>Git · GitHub · JUnit · Maven · Scrum · DDD · TDD</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="about-panel">
+          <div><span class="kicker">03 / Contacto</span><h2 id="contacto-titulo">Vamos conversar?</h2><p>Procuro um estágio curricular em engenharia de software, com início em fevereiro de 2027. Tenho interesse especial em equipas de Backend e Full-stack e em projetos onde possa aprender e contribuir.</p></div>
+          <div class="contact-links">
+            <a class="btn btn-primary" href="mailto:afonsomachado1892@gmail.com">Enviar email ↗</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/afonso-am-machado/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© <span id="ano">2026</span> Afonso Marques Machado · Feito com HTML, CSS e JavaScript.</span><a href="https://github.com/1241182-AfonsoMachado" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
+  <script>
+    // IMPORTANTE: coloca aqui os URLs exatos dos teus repositórios quando estiverem públicos.
+    // Exemplo: laprizza: 'https://github.com/UTILIZADOR/NOME-DO-REPOSITORIO'
+    const REPO_URLS = {
+      laprizza: '',
+      trafego: '',
+      ferroviaria: ''
+    };
+
+    for (const [key, url] of Object.entries(REPO_URLS)) {
+      const container = document.querySelector(`[data-project="${key}"]`);
+      if (!container || !url) continue;
+      if (!/^https:\/\/github\.com\/[^/]+\/[^/]+\/?$/.test(url)) continue;
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = 'Ver repositório no GitHub ↗';
+      container.replaceChildren(link);
+    }
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
