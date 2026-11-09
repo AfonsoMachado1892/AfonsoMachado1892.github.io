@@ -3,76 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portefólio de Afonso Machado, estudante de Engenharia Informática no ISEP.">
   <title>Afonso Machado | Portefólio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 760px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1, h2 { color: #111; }
-    h1 { margin-bottom: 5px; }
-    h2 { margin-top: 35px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
-    a { color: #145da0; }
-    .subtitulo { color: #555; margin-top: 0; }
-    .projeto { margin-bottom: 24px; }
-    .projeto h3 { margin-bottom: 4px; }
-    .projeto p { margin: 5px 0; }
-    footer { margin-top: 40px; color: #777; font-size: 14px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Afonso Machado</h1>
-    <p class="subtitulo">Estudante de Engenharia Informática no ISEP</p>
-    <p>
-      <a href="https://github.com/AfonsoMachado1892">GitHub</a> |
-      <a href="https://www.linkedin.com/in/afonso-am-machado/">LinkedIn</a> |
-      <a href="mailto:afonsomachado1892@gmail.com">Email</a>
-    </p>
+    <div class="container header-content">
+      <a class="logo" href="#inicio">Afonso Machado</a>
+      <nav aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#competencias">Competências</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contactos">Contactos</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
+  <main class="container">
+    <div class="intro" id="inicio">
+      <h1>Olá, sou o Afonso Machado.</h1>
+      <p class="subtitle">Estudante de Engenharia Informática no ISEP</p>
+      <p class="intro-text">Tenho interesse em desenvolvimento de software, especialmente Backend e Full-stack. Procuro um estágio curricular com início em fevereiro de 2027.</p>
+      <div class="links">
+        <a href="#projetos">Ver projetos</a>
+        <a href="https://github.com/AfonsoMachado1892" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/afonso-am-machado/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <section id="sobre">
       <h2>Sobre mim</h2>
-      <p>
-        Sou estudante do 3.º ano da Licenciatura em Engenharia Informática no ISEP.
-        Tenho interesse em desenvolvimento Backend e Full-stack e procuro um estágio
-        curricular a partir de fevereiro de 2027.
-      </p>
+      <div class="about">
+        <p>Sou estudante do 3.º ano da Licenciatura em Engenharia Informática no Instituto Superior de Engenharia do Porto (ISEP), com conclusão prevista para julho de 2027.</p>
+        <p>Ao longo do curso, participei em projetos de desenvolvimento de aplicações, bases de dados, redes e engenharia de software. Tive também a oportunidade de desempenhar funções de Scrum Master em projetos académicos.</p>
+        <p>Gostaria de integrar uma equipa onde possa aplicar os meus conhecimentos, aprender com profissionais mais experientes e contribuir para projetos reais.</p>
+        <p class="education"><strong>Formação:</strong> Licenciatura em Engenharia Informática — ISEP (2024–2027)</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Competências</h2>
-      <p><strong>Linguagens:</strong> Java, C, JavaScript, TypeScript, SQL e PL/SQL.</p>
-      <p><strong>Tecnologias:</strong> Spring Boot, React, PostgreSQL, MongoDB e APIs REST.</p>
-      <p><strong>Ferramentas:</strong> Git, GitHub, Maven e Postman.</p>
+    <section id="competencias" class="skills">
+      <h2>Competências técnicas</h2>
+      <p><strong>Linguagens:</strong> Java, C, JavaScript, TypeScript, Assembly RISC-V, SQL, PL/SQL, Prolog.</p>
+      <p><strong>Backend:</strong> Spring Boot, APIs REST, Spring Security, JPA.</p>
+      <p><strong>Frontend:</strong> React, JavaFX, HTML, CSS, Three.js.</p>
+      <p><strong>Bases de dados:</strong> PostgreSQL, MongoDB, Oracle Database, H2.</p>
+      <p><strong>Ferramentas e metodologias:</strong> Git, GitHub, Maven, Postman, JUnit, Scrum, DDD.</p>
     </section>
 
-    <section>
-      <h2>Projetos</h2>
-
-      <div class="projeto">
-        <h3>Gestão de Tráfego Aéreo (4.º semestre)</h3>
-        <p>Projeto académico de gestão e simulação de tráfego aéreo, desenvolvido com Java, C e PostgreSQL.</p>
-        <a href="https://github.com/AfonsoMachado1892/Sistema_Gestao_Trafego_Aereo-SEM4">Ver repositório</a>
+    <section id="projetos">
+      <h2>Projetos académicos</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>LaPrizza — Gestão de Restauração</h3>
+          <small>5.º semestre · Em desenvolvimento</small>
+          <p>Aplicação Full-stack de gestão de restauração, com desenvolvimento de APIs REST, persistência de dados e aplicação de princípios de DDD e Onion Architecture.</p>
+          <p class="tech">Java · Spring Boot · React · TypeScript · MongoDB</p>
+        </article>
+        <article class="project">
+          <h3>Sistema de Gestão de Tráfego Aéreo</h3>
+          <small>4.º semestre · 2026</small>
+          <p>Sistema de gestão e simulação de tráfego aéreo, com comunicação TCP/UDP e testes automatizados. Desempenhei funções de Scrum Master durante o segundo sprint.</p>
+          <p class="tech">Java · C · PostgreSQL · TCP/UDP</p>
+          <a href="https://github.com/AfonsoMachado1892/Sistema_Gestao_Trafego_Aereo-SEM4" target="_blank" rel="noopener noreferrer">Ver repositório no GitHub</a>
+        </article>
+        <article class="project">
+          <h3>Sistema de Gestão de Logística Ferroviária</h3>
+          <small>3.º semestre · 2025–2026</small>
+          <p>Projeto de gestão de logística ferroviária com utilização de algoritmos, estruturas de dados e bases de dados relacionais.</p>
+          <p class="tech">Java · C · Assembly RISC-V · SQL · PL/SQL</p>
+          <a href="https://github.com/AfonsoMachado1892/Sistema_Gestao_Logistica_Ferroviaria-sem3" target="_blank" rel="noopener noreferrer">Ver repositório no GitHub</a>
+        </article>
+        <article class="project">
+          <h3>Arquitetura de Rede para Campus Aeroportuário</h3>
+          <small>4.º semestre · 2026</small>
+          <p>Desenho e simulação de uma rede para um campus aeroportuário, incluindo VLANs, routing OSPF, endereçamento IPv4 e serviços de rede.</p>
+          <p class="tech">Cisco Packet Tracer · OSPF · VLAN · DHCP · DNS</p>
+        </article>
+        <article class="project">
+          <h3>Jogo de Simulação de Gestão Ferroviária</h3>
+          <small>2.º semestre · 2025</small>
+          <p>Jogo de gestão ferroviária com diferentes cenários históricos, interface JavaFX e cálculo de rotas numa rede representada como grafo.</p>
+          <p class="tech">Java · JavaFX · Algoritmos de grafos · Python</p>
+        </article>
       </div>
+    </section>
 
-      <div class="projeto">
-        <h3>Logística Ferroviária (3.º semestre)</h3>
-        <p>Projeto académico de gestão de operações ferroviárias com Java, C, SQL e PL/SQL.</p>
-        <a href="https://github.com/AfonsoMachado1892/Sistema_Gestao_Logistica_Ferroviaria-sem3">Ver repositório</a>
-      </div>
-
-      <div class="projeto">
-        <h3>LaPrizza (5.º semestre)</h3>
-        <p>Aplicação Full-stack de gestão de restauração com Java, Spring Boot, React, TypeScript e MongoDB.</p>
-        <p><em>Em desenvolvimento — repositório a adicionar mais tarde.</em></p>
-      </div>
+    <section id="contactos">
+      <h2>Contactos</h2>
+      <p><strong>Email:</strong> <a href="mailto:afonsomachado1892@gmail.com">afonsomachado1892@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/AfonsoMachado1892" target="_blank" rel="noopener noreferrer">github.com/AfonsoMachado1892</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/afonso-am-machado/" target="_blank" rel="noopener noreferrer">linkedin.com/in/afonso-am-machado</a></p>
+      <p><strong>Localização:</strong> Porto, Portugal</p>
     </section>
   </main>
+
+  <footer><div class="container">© 2026 Afonso Machado</div></footer>
 </body>
 </html>
