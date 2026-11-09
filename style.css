@@ -1,0 +1,41 @@
+/* Portefólio Afonso Machado — estilo simples, sem frameworks */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.65; color: #27313b; background: #fafafa; }
+a { color: #285b78; }
+a:hover { color: #163e56; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+header { background: white; border-bottom: 1px solid #ddd; }
+.header-content { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding-top: 18px; padding-bottom: 18px; }
+.logo { font-weight: bold; font-size: 19px; color: #27313b; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 18px; }
+nav a { text-decoration: none; color: #505964; font-size: 14px; }
+.intro { padding: 75px 0 65px; border-bottom: 1px solid #e1e1e1; }
+h1 { font-size: clamp(34px, 5vw, 49px); letter-spacing: -.9px; margin: 0 0 5px; line-height: 1.2; }
+.subtitle { font-size: 19px; color: #52606c; margin: 0 0 19px; }
+.intro-text { max-width: 690px; font-size: 16px; }
+.links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 22px; }
+.links a { text-decoration: underline; text-underline-offset: 3px; }
+section { padding: 42px 0; border-bottom: 1px solid #e1e1e1; }
+h2 { font-size: 23px; margin: 0 0 17px; color: #22303a; }
+h3 { font-size: 18px; margin: 0 0 9px; }
+p { margin: 0 0 13px; }
+.about { max-width: 800px; }
+.education { margin-top: 12px; }
+.muted { color: #65717a; }
+.skills p { margin: 0 0 10px; }
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.project { border: 1px solid #ddd; background: #fff; border-radius: 5px; padding: 20px; }
+.project small { display: block; color: #6c737b; margin-bottom: 10px; }
+.project p { font-size: 14px; }
+.tech { color: #65717a; font-size: 13px; margin-top: 13px; }
+.project a { font-size: 14px; }
+footer { padding: 24px 0 35px; color: #68727a; font-size: 13px; }
+@media (max-width: 680px) {
+  .header-content { align-items: flex-start; flex-direction: column; }
+  nav { gap: 12px; }
+  .intro { padding: 50px 0 43px; }
+  .projects { grid-template-columns: 1fr; }
+  section { padding: 34px 0; }
+}
