@@ -3,101 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portefólio de Afonso Machado, estudante de Engenharia Informática no ISEP.">
+  <meta name="description" content="Portefólio de Afonso Machado, estudante de Engenharia Informática no ISEP. Projetos de desenvolvimento Backend e Full-stack.">
   <title>Afonso Machado | Portefólio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container header-content">
-      <a class="logo" href="#inicio">Afonso Machado</a>
-      <nav aria-label="Navegação principal">
+  <nav class="topbar" aria-label="Navegação principal">
+    <div class="wrap nav-content">
+      <a class="brand" href="#inicio">Afonso Machado<span class="brand-dot">.</span></a>
+      <div class="nav-links">
         <a href="#sobre">Sobre</a>
         <a href="#competencias">Competências</a>
         <a href="#projetos">Projetos</a>
         <a href="#contactos">Contactos</a>
-      </nav>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero wrap">
+    <div class="intro">
+      <p class="eyebrow">PORTFÓLIO / ENGENHARIA INFORMÁTICA</p>
+      <h1>Olá, sou o<br><span>Afonso Machado.</span></h1>
+      <p class="hero-subtitle">Estudante de Engenharia Informática no ISEP</p>
+      <p>Interesso-me por desenvolvimento de software, especialmente pelas áreas de <strong>Backend</strong> e <strong>Full-stack</strong>.</p>
+      <p>Procuro um estágio curricular em desenvolvimento de software com início previsto para fevereiro de 2027.</p>
+      <div class="actions">
+        <a class="button filled" href="#projetos">Ver projetos</a>
+        <a class="button outlined" href="https://github.com/AfonsoMachado1892" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+    <div class="intro-side" aria-label="Resumo académico">
+      <p class="side-label">PERFIL</p>
+      <div class="initials" aria-hidden="true">AM<span>.</span></div>
+      <div class="side-rule"></div>
+      <p class="side-title">Licenciatura em Engenharia Informática</p>
+      <p>Instituto Superior de Engenharia do Porto</p>
+      <p class="side-small">2024 — 2027 · Porto</p>
     </div>
   </header>
 
-  <main class="container">
-    <div class="intro" id="inicio">
-      <h1>Olá, sou o Afonso Machado.</h1>
-      <p class="subtitle">Estudante de Engenharia Informática no ISEP</p>
-      <p class="intro-text">Tenho interesse em desenvolvimento de software, especialmente Backend e Full-stack. Procuro um estágio curricular com início em fevereiro de 2027.</p>
-      <div class="links">
-        <a href="#projetos">Ver projetos</a>
-        <a href="https://github.com/AfonsoMachado1892" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/afonso-am-machado/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-    </div>
-
-    <section id="sobre">
+  <main class="wrap">
+    <section id="sobre" class="section">
+      <p class="eyebrow">01 / APRESENTAÇÃO</p>
       <h2>Sobre mim</h2>
-      <div class="about">
+      <div class="body-copy">
         <p>Sou estudante do 3.º ano da Licenciatura em Engenharia Informática no Instituto Superior de Engenharia do Porto (ISEP), com conclusão prevista para julho de 2027.</p>
-        <p>Ao longo do curso, participei em projetos de desenvolvimento de aplicações, bases de dados, redes e engenharia de software. Tive também a oportunidade de desempenhar funções de Scrum Master em projetos académicos.</p>
-        <p>Gostaria de integrar uma equipa onde possa aplicar os meus conhecimentos, aprender com profissionais mais experientes e contribuir para projetos reais.</p>
-        <p class="education"><strong>Formação:</strong> Licenciatura em Engenharia Informática — ISEP (2024–2027)</p>
+        <p>Durante o curso participei em vários projetos de desenvolvimento de aplicações, bases de dados, redes e engenharia de software. Trabalhei com tecnologias como Java, Spring Boot, React e TypeScript e tive a oportunidade de desempenhar funções de Scrum Master.</p>
+        <p>Gostaria de integrar uma equipa onde possa aprender com profissionais experientes, aplicar os meus conhecimentos e contribuir para projetos reais.</p>
       </div>
     </section>
 
-    <section id="competencias" class="skills">
+    <section id="formacao" class="section">
+      <p class="eyebrow">02 / PERCURSO</p>
+      <h2>Formação</h2>
+      <div class="education">
+        <div>
+          <h3>Licenciatura em Engenharia Informática</h3>
+          <p>Instituto Superior de Engenharia do Porto (ISEP)</p>
+        </div>
+        <p class="date">2024 — 2027 (previsto)</p>
+      </div>
+    </section>
+
+    <section id="competencias" class="section">
+      <p class="eyebrow">03 / TECNOLOGIAS</p>
       <h2>Competências técnicas</h2>
-      <p><strong>Linguagens:</strong> Java, C, JavaScript, TypeScript, Assembly RISC-V, SQL, PL/SQL, Prolog.</p>
-      <p><strong>Backend:</strong> Spring Boot, APIs REST, Spring Security, JPA.</p>
-      <p><strong>Frontend:</strong> React, JavaFX, HTML, CSS, Three.js.</p>
-      <p><strong>Bases de dados:</strong> PostgreSQL, MongoDB, Oracle Database, H2.</p>
-      <p><strong>Ferramentas e metodologias:</strong> Git, GitHub, Maven, Postman, JUnit, Scrum, DDD.</p>
-    </section>
-
-    <section id="projetos">
-      <h2>Projetos académicos</h2>
-      <div class="projects">
-        <article class="project">
-          <h3>LaPrizza — Gestão de Restauração</h3>
-          <small>5.º semestre · Em desenvolvimento</small>
-          <p>Aplicação Full-stack de gestão de restauração, com desenvolvimento de APIs REST, persistência de dados e aplicação de princípios de DDD e Onion Architecture.</p>
-          <p class="tech">Java · Spring Boot · React · TypeScript · MongoDB</p>
-        </article>
-        <article class="project">
-          <h3>Sistema de Gestão de Tráfego Aéreo</h3>
-          <small>4.º semestre · 2026</small>
-          <p>Sistema de gestão e simulação de tráfego aéreo, com comunicação TCP/UDP e testes automatizados. Desempenhei funções de Scrum Master durante o segundo sprint.</p>
-          <p class="tech">Java · C · PostgreSQL · TCP/UDP</p>
-          <a href="https://github.com/AfonsoMachado1892/Sistema_Gestao_Trafego_Aereo-SEM4" target="_blank" rel="noopener noreferrer">Ver repositório no GitHub</a>
-        </article>
-        <article class="project">
-          <h3>Sistema de Gestão de Logística Ferroviária</h3>
-          <small>3.º semestre · 2025–2026</small>
-          <p>Projeto de gestão de logística ferroviária com utilização de algoritmos, estruturas de dados e bases de dados relacionais.</p>
-          <p class="tech">Java · C · Assembly RISC-V · SQL · PL/SQL</p>
-          <a href="https://github.com/AfonsoMachado1892/Sistema_Gestao_Logistica_Ferroviaria-sem3" target="_blank" rel="noopener noreferrer">Ver repositório no GitHub</a>
-        </article>
-        <article class="project">
-          <h3>Arquitetura de Rede para Campus Aeroportuário</h3>
-          <small>4.º semestre · 2026</small>
-          <p>Desenho e simulação de uma rede para um campus aeroportuário, incluindo VLANs, routing OSPF, endereçamento IPv4 e serviços de rede.</p>
-          <p class="tech">Cisco Packet Tracer · OSPF · VLAN · DHCP · DNS</p>
-        </article>
-        <article class="project">
-          <h3>Jogo de Simulação de Gestão Ferroviária</h3>
-          <small>2.º semestre · 2025</small>
-          <p>Jogo de gestão ferroviária com diferentes cenários históricos, interface JavaFX e cálculo de rotas numa rede representada como grafo.</p>
-          <p class="tech">Java · JavaFX · Algoritmos de grafos · Python</p>
-        </article>
+      <div class="skills-grid">
+        <article class="skill-card"><h3>Linguagens</h3><p>Java, C, JavaScript, TypeScript, Assembly RISC-V, SQL, PL/SQL, Prolog</p></article>
+        <article class="skill-card"><h3>Backend</h3><p>Spring Boot, REST APIs, Spring Security, JPA</p></article>
+        <article class="skill-card"><h3>Frontend</h3><p>React, JavaFX, HTML, CSS, Three.js, Vite</p></article>
+        <article class="skill-card"><h3>Bases de dados</h3><p>PostgreSQL, MongoDB, Oracle Database, H2</p></article>
+        <article class="skill-card"><h3>Ferramentas e testes</h3><p>Git, GitHub, Maven, Postman, JUnit, Vitest, React Testing Library</p></article>
+        <article class="skill-card"><h3>Metodologias</h3><p>Scrum, OOP, DDD, TDD, Onion Architecture, Clean Architecture</p></article>
       </div>
     </section>
 
-    <section id="contactos">
-      <h2>Contactos</h2>
-      <p><strong>Email:</strong> <a href="mailto:afonsomachado1892@gmail.com">afonsomachado1892@gmail.com</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/AfonsoMachado1892" target="_blank" rel="noopener noreferrer">github.com/AfonsoMachado1892</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/afonso-am-machado/" target="_blank" rel="noopener noreferrer">linkedin.com/in/afonso-am-machado</a></p>
-      <p><strong>Localização:</strong> Porto, Portugal</p>
+    <section id="projetos" class="section">
+      <p class="eyebrow">04 / TRABALHO ACADÉMICO</p>
+      <h2>Projetos</h2>
+      <p class="section-lead">Alguns projetos em que participei ao longo da licenciatura.</p>
+
+      <article class="project-card">
+        <div class="project-media plain-media"><span class="media-symbol" aria-hidden="true">01</span><span>WEB / FULL-STACK</span></div>
+        <div class="project-content">
+          <p class="project-date">5.º semestre · Setembro 2026 — Presente</p>
+          <h3>LaPrizza — Gestão de Restauração</h3>
+          <p>Aplicação Full-stack de gestão de restauração com desenvolvimento de APIs REST, persistência de dados e utilização de DDD e Onion Architecture. Desempenhei também funções de Scrum Master.</p>
+          <p class="tech">Java · Spring Boot · React · TypeScript · MongoDB</p>
+          <span class="project-note">Em desenvolvimento</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media plain-media"><span class="media-symbol" aria-hidden="true">02</span><span>SOFTWARE / SISTEMAS</span></div>
+        <div class="project-content">
+          <p class="project-date">4.º semestre · Fevereiro — Julho 2026</p>
+          <h3>Sistema de Gestão de Tráfego Aéreo</h3>
+          <p>Solução de gestão e simulação de tráfego aéreo com Java, C e PostgreSQL, envolvendo comunicação TCP/UDP e testes automatizados. Fui Scrum Master no segundo sprint.</p>
+          <p class="tech">Java · C · PostgreSQL · TCP/UDP</p>
+          <a href="https://github.com/AfonsoMachado1892/Sistema_Gestao_Trafego_Aereo-SEM4" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media plain-media"><span class="media-symbol" aria-hidden="true">03</span><span>ALGORITMOS / DADOS</span></div>
+        <div class="project-content">
+          <p class="project-date">3.º semestre · Setembro 2025 — Janeiro 2026</p>
+          <h3>Sistema de Gestão de Logística Ferroviária</h3>
+          <p>Projeto de gestão logística ferroviária que envolveu algoritmos, estruturas de dados e bases de dados relacionais.</p>
+          <p class="tech">Java · C · Assembly RISC-V · SQL · PL/SQL</p>
+          <a href="https://github.com/AfonsoMachado1892/Sistema_Gestao_Logistica_Ferroviaria-sem3" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media image-media"><img src="images/terminal3.png" alt="Topologia da rede do Terminal 3 no Cisco Packet Tracer" loading="lazy"></div>
+        <div class="project-content">
+          <p class="project-date">4.º semestre · Fevereiro — Maio 2026</p>
+          <h3>Rede de um Campus Aeroportuário</h3>
+          <p>Desenho e simulação da rede de um campus aeroportuário, com planeamento de cablagem, VLANs, endereçamento IPv4, OSPF e serviços DNS, DHCP e VoIP.</p>
+          <p class="tech">Cisco Packet Tracer · VLAN · OSPF · DNS · DHCP</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media plain-media"><span class="media-symbol" aria-hidden="true">05</span><span>JAVA / SIMULAÇÃO</span></div>
+        <div class="project-content">
+          <p class="project-date">2.º semestre · 2025</p>
+          <h3>Jogo de Simulação de Gestão Ferroviária</h3>
+          <p>Jogo de gestão ferroviária desenvolvido em Java com interface JavaFX, cenários históricos, gestão de estações e locomotivas e algoritmos de grafos para cálculo de percursos.</p>
+          <p class="tech">Java · JavaFX · Grafos · Dijkstra</p>
+        </div>
+      </article>
     </section>
   </main>
 
-  <footer><div class="container">© 2026 Afonso Machado</div></footer>
+  <footer id="contactos">
+    <div class="wrap footer-content">
+      <p class="eyebrow">05 / CONTACTO</p>
+      <h2>Contactos</h2>
+      <p>Se quiseres entrar em contacto comigo ou conhecer melhor os meus projetos:</p>
+      <div class="footer-links">
+        <a href="mailto:afonsomachado1892@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/afonso-am-machado/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/AfonsoMachado1892" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <p class="copyright">© 2026 Afonso Machado · Porto, Portugal</p>
+    </div>
+  </footer>
 </body>
 </html>

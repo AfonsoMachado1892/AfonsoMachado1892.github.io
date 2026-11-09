@@ -1,41 +1,107 @@
-/* Portefólio Afonso Machado — estilo simples, sem frameworks */
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: Arial, sans-serif; line-height: 1.65; color: #27313b; background: #fafafa; }
-a { color: #285b78; }
-a:hover { color: #163e56; }
-.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-header { background: white; border-bottom: 1px solid #ddd; }
-.header-content { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding-top: 18px; padding-bottom: 18px; }
-.logo { font-weight: bold; font-size: 19px; color: #27313b; text-decoration: none; }
-nav { display: flex; flex-wrap: wrap; gap: 18px; }
-nav a { text-decoration: none; color: #505964; font-size: 14px; }
-.intro { padding: 75px 0 65px; border-bottom: 1px solid #e1e1e1; }
-h1 { font-size: clamp(34px, 5vw, 49px); letter-spacing: -.9px; margin: 0 0 5px; line-height: 1.2; }
-.subtitle { font-size: 19px; color: #52606c; margin: 0 0 19px; }
-.intro-text { max-width: 690px; font-size: 16px; }
-.links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 22px; }
-.links a { text-decoration: underline; text-underline-offset: 3px; }
-section { padding: 42px 0; border-bottom: 1px solid #e1e1e1; }
-h2 { font-size: 23px; margin: 0 0 17px; color: #22303a; }
-h3 { font-size: 18px; margin: 0 0 9px; }
-p { margin: 0 0 13px; }
-.about { max-width: 800px; }
-.education { margin-top: 12px; }
-.muted { color: #65717a; }
-.skills p { margin: 0 0 10px; }
-.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.project { border: 1px solid #ddd; background: #fff; border-radius: 5px; padding: 20px; }
-.project small { display: block; color: #6c737b; margin-bottom: 10px; }
-.project p { font-size: 14px; }
-.tech { color: #65717a; font-size: 13px; margin-top: 13px; }
-.project a { font-size: 14px; }
-footer { padding: 24px 0 35px; color: #68727a; font-size: 13px; }
-@media (max-width: 680px) {
-  .header-content { align-items: flex-start; flex-direction: column; }
-  nav { gap: 12px; }
-  .intro { padding: 50px 0 43px; }
-  .projects { grid-template-columns: 1fr; }
-  section { padding: 34px 0; }
+/* Portefólio de Afonso Machado — HTML e CSS simples */
+:root {
+  --background: #161a1e;
+  --surface: #24292e;
+  --surface-alt: #1c2227;
+  --text: #e9e8e3;
+  --muted: #b1b7ba;
+  --accent: #a9bfca;
+  --border: #3d454b;
 }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { margin: 0; background: var(--background); color: var(--text); font: 16px/1.7 Arial, Helvetica, sans-serif; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.wrap { max-width: 1000px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+
+/* Navegação */
+.topbar { border-bottom: 1px solid var(--border); }
+.nav-content { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { font-size: 20px; font-weight: bold; color: var(--text); }
+.brand-dot { color: var(--accent); }
+.nav-links { display: flex; flex-wrap: wrap; gap: 22px; }
+.nav-links a { font-size: 14px; color: var(--muted); }
+.nav-links a:hover { color: var(--text); }
+
+/* Introdução */
+.hero { padding-top: 90px; padding-bottom: 90px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 55px; align-items: center; border-bottom: 1px solid var(--border); }
+.eyebrow { color: var(--accent); font-size: 12px; font-weight: bold; letter-spacing: 1.6px; text-transform: uppercase; margin: 0 0 22px; }
+h1 { font-size: clamp(36px, 5vw, 55px); line-height: 1.13; letter-spacing: -1.2px; margin: 0 0 24px; }
+h1 span { color: var(--accent); }
+.hero-subtitle { color: var(--text); font-size: 19px; margin: 0 0 20px; }
+.intro > p:not(.eyebrow):not(.hero-subtitle) { color: var(--muted); margin: 0 0 13px; }
+.intro strong { color: var(--text); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.button { display: inline-block; padding: 10px 21px; border: 1px solid var(--border); border-radius: 4px; font-size: 14px; }
+.button.filled { background: var(--accent); color: #11191e; border-color: var(--accent); font-weight: bold; }
+.button.outlined { color: var(--text); }
+.button:hover { text-decoration: none; filter: brightness(1.1); }
+.intro-side { min-height: 310px; border: 1px solid var(--border); border-radius: 5px; background: var(--surface-alt); padding: 25px 30px; }
+.side-label { color: var(--accent); font-size: 12px; font-weight: bold; letter-spacing: 1.5px; margin: 0; }
+.initials { font-size: 88px; font-weight: bold; letter-spacing: -6px; line-height: 1.55; }
+.initials span { color: var(--accent); }
+.side-rule { height: 1px; background: var(--border); margin-bottom: 23px; }
+.side-title { font-weight: bold; margin: 0 0 4px; }
+.intro-side p:not(.side-label):not(.side-title) { color: var(--muted); margin: 0 0 4px; font-size: 14px; }
+.intro-side .side-small { font-size: 13px; }
+
+/* Secções */
+.section { padding: 66px 0; border-bottom: 1px solid var(--border); }
+.section h2, footer h2 { font-size: 29px; margin: 0 0 26px; line-height: 1.2; }
+.body-copy { max-width: 760px; }
+.body-copy p { color: var(--muted); margin: 0 0 17px; }
+.education { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.education h3 { font-size: 19px; margin: 0 0 5px; }
+.education p { margin: 0; color: var(--muted); }
+.education .date { color: var(--accent); font-size: 14px; }
+
+/* Competências */
+.skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.skill-card { padding: 23px; background: var(--surface); border: 1px solid var(--border); border-radius: 5px; }
+.skill-card h3 { margin: 0 0 9px; font-size: 18px; }
+.skill-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* Projetos */
+.section-lead { color: var(--muted); margin: -8px 0 26px; }
+.project-card { display: grid; grid-template-columns: minmax(0, 33%) minmax(0, 1fr); gap: 27px; align-items: center; border: 1px solid var(--border); background: var(--surface); padding: 24px; margin-bottom: 18px; border-radius: 5px; }
+.project-card:hover { border-color: #71858d; }
+.project-media { min-height: 185px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; }
+.plain-media { gap: 4px; color: var(--muted); font-size: 11px; letter-spacing: 1.3px; }
+.media-symbol { font-size: 61px; font-weight: bold; color: var(--accent); letter-spacing: -3px; line-height: 1.3; }
+.image-media { background: #f1f2ef; }
+.image-media img { width: 100%; height: 185px; object-fit: contain; }
+.project-content { min-width: 0; }
+.project-date { font-size: 12px; color: var(--accent) !important; margin: 0 0 7px !important; }
+.project-content h3 { font-size: 20px; margin: 0 0 11px; line-height: 1.35; }
+.project-content p { color: var(--muted); font-size: 14px; margin: 0 0 13px; }
+.project-content .tech { font-size: 13px; color: #d1d7da; }
+.project-content a { font-weight: bold; font-size: 14px; }
+.project-note { font-style: italic; font-size: 13px; color: var(--muted); }
+
+/* Contactos */
+footer { padding: 60px 0 22px; }
+footer p:not(.eyebrow) { color: var(--muted); }
+.footer-links { display: flex; gap: 22px; flex-wrap: wrap; margin: 25px 0 55px; }
+.copyright { font-size: 12px; border-top: 1px solid var(--border); padding-top: 20px; }
+
+/* Telemóvel */
+@media (max-width: 760px) {
+  .nav-content { flex-direction: column; padding-top: 15px; padding-bottom: 15px; gap: 12px; }
+  .nav-links { justify-content: center; gap: 16px; }
+  .hero { grid-template-columns: 1fr; padding-top: 55px; padding-bottom: 55px; gap: 32px; }
+  .intro-side { max-width: 450px; min-height: 0; }
+  .section { padding: 50px 0; }
+  .project-card { grid-template-columns: 1fr; }
+  .project-media { min-height: 150px; }
+  .image-media img { height: 190px; }
+}
+@media (max-width: 520px) {
+  .wrap { padding-left: 18px; padding-right: 18px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 12px; }
+  h1 { font-size: 36px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
