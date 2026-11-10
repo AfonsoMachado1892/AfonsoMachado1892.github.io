@@ -60,10 +60,10 @@ export const projects: Project[] = [
     id: "airport-network",
     number: "04",
     category: "networks",
-    title: { pt: "Rede de um Campus de um Aeroporto ", en: "Airport Campus Network" },
+    title: { pt: "Rede do Campus de um Aeroporto ", en: "Airport Campus Network" },
     period: { pt: "4.º semestre · Fev. — Mai. 2026", en: "4th semester · Feb. — May 2026" },
     description: {
-      pt: "Desenho e simulação de uma rede para um campus de um aeroporto no Cisco Packet Tracer, com VLANs, endereçamento IPv4, routing OSPF e serviços DNS, DHCP e VoIP.",
+      pt: "Desenho e simulação de uma rede do campus de um aeroporto no Cisco Packet Tracer, com VLANs, endereçamento IPv4, routing OSPF e serviços DNS, DHCP e VoIP.",
       en: "Design and simulation of an airport campus network in Cisco Packet Tracer, covering VLANs, IPv4 addressing, OSPF routing and DNS, DHCP and VoIP services.",
     },
     tech: ["Cisco Packet Tracer", "VLAN", "OSPF", "DNS", "DHCP"],
