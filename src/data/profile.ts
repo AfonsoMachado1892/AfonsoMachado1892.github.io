@@ -19,12 +19,12 @@ export const profile = {
   about: {
     pt: [
       "Estou no 3.º ano da Licenciatura em Engenharia Informática no Instituto Superior de Engenharia do Porto (ISEP), com conclusão prevista para julho de 2027.",
-      "Ao longo do curso participei em projetos de desenvolvimento de aplicações, sistemas, bases de dados e redes. Tenho especial interesse em Backend e Full-stack e gosto de perceber como as diferentes partes de uma aplicação funcionam em conjunto.",
-      "Trabalhei em equipa com a metodologia Scrum e desempenhei funções de Scrum Master em projetos académicos. Gostaria de aplicar o que aprendi, conhecer novas ferramentas e continuar a desenvolver as minhas competências em contexto profissional.",
+      "Ao longo do curso participei em projetos de desenvolvimento de aplicações, sistemas, bases de dados e redes. Tenho interesse em Backend e Full-stack e gosto de trabalhar com as diferentes partes de uma aplicação.",
+      "Trabalhei em equipa com a metodologia Scrum e desempenhei funções de Scrum Master em projetos académicos. Gostaria de aplicar o que aprendi, conhecer novas ferramentas e continuar a desenvolver as minhas competências num contexto profissional.",
     ],
     en: [
       "I am a third-year Computer Engineering student at Instituto Superior de Engenharia do Porto (ISEP), with graduation expected in July 2027.",
-      "During my degree, I have worked on application development, systems, databases and networking projects. I am particularly interested in Backend and Full-stack development, and in understanding how the different parts of an application work together.",
+      "During my degree, I have worked on application development, systems, databases and networking projects. I am interested in Backend and Full-stack development, and with working with the different parts of an application.",
       "I have worked in teams using Scrum and served as Scrum Master in academic projects. I would like to apply what I have learned, discover new tools and continue developing my skills in a professional environment.",
     ],
   },
