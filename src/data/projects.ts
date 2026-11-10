@@ -28,6 +28,7 @@ export const projects: Project[] = [
       en: "Full-stack restaurant management application developed with Java, Spring Boot, React, TypeScript and MongoDB. Includes REST APIs, authentication and data persistence, applying DDD and Onion Architecture principles.",
     },
     tech: ["Java", "Spring Boot", "React", "TypeScript", "MongoDB"],
+    repo: "https://github.com/AfonsoMachado1892/Laprizza-restaurant-management",
     ongoing: true,
   },
   {
@@ -41,7 +42,7 @@ export const projects: Project[] = [
       en: "Air traffic management and simulation system using Java, C and PostgreSQL, involving TCP/UDP communication, software engineering principles and automated testing.",
     },
     tech: ["Java", "C", "PostgreSQL", "TCP/UDP", "Scrum"],
-    repo: "https://github.com/AfonsoMachado1892/air-traffic-management-system-sem4",
+    repo: "https://github.com/AfonsoMachado1892/AISafe-Air-traffic-management",
   },
   {
     id: "railway-logistics",
@@ -54,7 +55,7 @@ export const projects: Project[] = [
       en: "Railway logistics management solution developed with Java, C, RISC-V Assembly, SQL and PL/SQL. Applied algorithms, data structures and relational databases.",
     },
     tech: ["Java", "C", "Assembly RISC-V", "SQL", "PL/SQL"],
-    repo: "https://github.com/AfonsoMachado1892/railway-logistics-management-system-sem3",
+    repo: "https://github.com/AfonsoMachado1892/Logistics-on-Rails",
   },
   {
     id: "airport-network",
@@ -67,7 +68,7 @@ export const projects: Project[] = [
       en: "Design and simulation of an airport campus network in Cisco Packet Tracer, covering VLANs, IPv4 addressing, OSPF routing and DNS, DHCP and VoIP services.",
     },
     tech: ["Cisco Packet Tracer", "VLAN", "OSPF", "DNS", "DHCP"],
-    repo: "https://github.com/AfonsoMachado1892/airport-campus-network-design-sem4",
+    repo: "https://github.com/AfonsoMachado1892/Airport-campus-network",
     image: "./images/terminal3.png",
     imageAlt: { pt: "Topologia da rede do Terminal 3 no Cisco Packet Tracer", en: "Terminal 3 network topology in Cisco Packet Tracer" },
   },
@@ -82,7 +83,7 @@ export const projects: Project[] = [
       en: "Railway management Simulation in Java and JavaFX with historical scenarios, railway construction, locomotive purchases and graph-based route calculation.",
     },
     tech: ["Java", "JavaFX", "Grafos", "Dijkstra"],
-    repo: "https://github.com/AfonsoMachado1892/railway-management-simulator-sem2",
+    repo: "https://github.com/AfonsoMachado1892/All-Aboard-Railway-management",
   },
   {
     id: "eigenfaces",
@@ -95,6 +96,6 @@ export const projects: Project[] = [
       en: "Java face recognition system that uses matrix operations, eigenvalues and eigenvectors for image reconstruction, and Euclidean distance for face comparison.",
     },
     tech: ["Java", "Eigenfaces", "Linear Algebra", "Image Processing"],
-    repo: "https://github.com/AfonsoMachado1892/eigenfaces-face-recognition-sem1",
+    repo: "https://github.com/AfonsoMachado1892/Eigenfaces-face-recognition",
   },
 ]
