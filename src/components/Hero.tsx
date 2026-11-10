@@ -22,9 +22,7 @@ export default function Hero() {
         </div>
         <aside className="hero-panel" aria-label={t.hero.profileLabel}>
           <div className="panel-top"><span>{t.hero.profileLabel}</span><span>2027 / 01</span></div>
-          <div className="panel-illustration" aria-hidden="true">
-            <span className="panel-bracket">{`{`}</span><span className="panel-letters">AM</span><span className="panel-bracket">{`}`}</span>
-          </div>
+          <img className="panel-portrait" src="/images/afonso-portrait.jpg" alt={lang === "pt" ? "Retrato de Afonso Machado" : "Portrait of Afonso Machado"} loading="eager" fetchPriority="high" />
           <div className="panel-bottom">
             <p className="panel-title">{t.hero.profileTitle}</p>
             <p>{t.hero.profileTime}</p>

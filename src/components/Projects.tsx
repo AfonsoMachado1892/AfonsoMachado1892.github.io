@@ -43,7 +43,6 @@ export default function Projects() {
                 <p className="card-period">{project.period[lang]}</p>
                 <h3>{project.title[lang]}</h3>
                 <p className="card-description">{project.description[lang]}</p>
-                {project.contribution && <p className="card-contribution"><strong>{t.projects.contribution}:</strong> {project.contribution[lang]}</p>}
                 <ul className="project-tags">
                   {project.tech.map(tech => <li key={tech}>{tech}</li>)}
                 </ul>

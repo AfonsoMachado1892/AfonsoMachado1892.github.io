@@ -32,7 +32,7 @@ const pt = {
     intro: "Alguns dos projetos em que participei durante a licenciatura.",
     all: "Todos", web: "Web / Full-stack", systems: "Software / Sistemas", networks: "Redes",
     filter: "Filtrar projetos por área", code: "Ver repositório", ongoing: "Em desenvolvimento",
-    contribution: "A minha participação", aria: "Projetos académicos",
+    aria: "Projetos académicos",
   },
   contact: {
     kicker: "04 / Vamos falar",
@@ -71,7 +71,7 @@ const en: typeof pt = {
     intro: "Some of the projects I have worked on during my degree.",
     all: "All", web: "Web / Full-stack", systems: "Software / Systems", networks: "Networking",
     filter: "Filter projects by area", code: "View repository", ongoing: "In development",
-    contribution: "My contribution", aria: "Academic projects",
+    aria: "Academic projects",
   },
   contact: {
     kicker: "04 / Let's talk", subject: "Contact",

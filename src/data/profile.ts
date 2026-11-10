@@ -45,6 +45,6 @@ export const profile = {
     { id: "methods", title: { pt: "Metodologias", en: "Methodologies" } as Localized, items: ["Scrum", "OOP", "DDD", "TDD", "Onion Architecture", "Clean Architecture"] },
   ],
   email: "afonsomachado1892@gmail.com",
-  github: "https://github.com/AfonsoMachado1892",
+  github: "https://github.com/1241182-AfonsoMachado",
   linkedin: "https://www.linkedin.com/in/afonso-am-machado/",
 } as const
